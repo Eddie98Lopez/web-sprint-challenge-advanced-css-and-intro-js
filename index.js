@@ -246,11 +246,24 @@ function get20s(array,year1,year2){
 
   for (let i=0; i<array.length; i++){
 
-    if(array[i].years){}
+    if(parseFloat(array[i].years)>=1900){
+      = array[i].name
+    }
+
+    
   }
+
+
  return array[i].name
 
 }
+
+//Loop through all the objects
+//in each object access the value of years
+// compare range in years of artist to range of 1900-2000
+//years returns a string value i need numeric values to compare against the 1900-2000 range
+//range compare against   1900>= x <=2000
+//maybe you just need the birth year ... who lives for 1000 years
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
