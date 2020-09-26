@@ -215,7 +215,9 @@ console.log(artists[2].bio)
 Use an array method to fix this issue and console.log() to check your work. */
 
 
+artists[8].name = "Vincent Van Gogh";
 
+console.log(artists[8]);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
