@@ -240,27 +240,36 @@ function getArtistByIndex(array, index) {
 artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included /
 born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-console.log(artists[3].years)
+console.log(artists[3].years);
 
-function get20s(array,year1,year2){
+function get20s(array){
 
   for (let i=0; i<array.length; i++){
 
-    if(parseFloat(array[i].years)>=1900){
-      = array[i].name
+    const birth= parseInt(array[i].years);
+    
+      const yearsString = array[i].years;
+      const yearsStringArray = yearsString.split(" ");
+      const deathYear = yearsStringArray[2];
+      
+
+    if(parseFloat(array[i].years)>=1900 && deathYear <= 2000 ){
+      console.log( array[i].name )
     }
 
-    
   }
-
-
- return array[i].name
 
 }
 
+
+
+console.log(get20s(artists));
+
+
+//google split
 //Loop through all the objects
 //in each object access the value of years
-// compare range in years of artist to range of 1900-2000
+//compare range in years of artist to range of 1900-2000
 //years returns a string value i need numeric values to compare against the 1900-2000 range
 //range compare against   1900>= x <=2000
 //maybe you just need the birth year ... who lives for 1000 years
